@@ -5376,17 +5376,20 @@ html {
     
     .pricing-tabs {
         display: flex !important;
-        gap: 0.5rem !important;
+        justify-content: space-between !important;
+        gap: 0.4rem !important;
         margin-bottom: 1.5rem !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
+        overflow-x: visible !important;
+        flex-wrap: nowrap !important;
     }
     
     .pricing-tabs .tab-btn {
-        padding: 0.6rem 1rem !important;
-        font-size: 0.85rem !important;
+        flex: 1 !important;
+        padding: 0.65rem 0.5rem !important;
+        font-size: 0.8rem !important;
         white-space: nowrap !important;
         border-radius: 8px !important;
+        min-width: 0 !important;
     }
     
     .pricing-grid {
