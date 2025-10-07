@@ -2962,3 +2962,78 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Функция форматирования телефона
+function formatPhoneNumber(input) {
+    // Удаляем все нецифровые символы
+    let value = input.value.replace(/\D/g, '');
+    
+    // Если начинается с 375, оставляем как есть
+    // Если начинается с 8, заменяем на 375
+    if (value.startsWith('8')) {
+        value = '375' + value.substring(1);
+    }
+    
+    // Если не начинается с 375, добавляем
+    if (!value.startsWith('375')) {
+        if (value.length > 0) {
+            value = '375' + value;
+        }
+    }
+    
+    // Форматируем номер
+    let formatted = '';
+    if (value.length > 0) {
+        formatted = '+375';
+        if (value.length > 3) {
+            formatted += ' ' + value.substring(3, 5);
+        }
+        if (value.length > 5) {
+            formatted += ' ' + value.substring(5, 8);
+        }
+        if (value.length > 8) {
+            formatted += '-' + value.substring(8, 10);
+        }
+        if (value.length > 10) {
+            formatted += '-' + value.substring(10, 12);
+        }
+    }
+    
+    input.value = formatted;
+}
+
+// Применяем форматирование ко всем полям телефона
+document.addEventListener('DOMContentLoaded', function() {
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+    
+    phoneInputs.forEach(input => {
+        // Событие при вводе
+        input.addEventListener('input', function(e) {
+            formatPhoneNumber(e.target);
+        });
+        
+        // Событие при вставке
+        input.addEventListener('paste', function(e) {
+            setTimeout(() => formatPhoneNumber(e.target), 0);
+        });
+        
+        // Добавляем placeholder
+        if (!input.placeholder || input.placeholder === 'Введите номер телефона') {
+            input.placeholder = '+375 XX XXX-XX-XX';
+        }
+        
+        // Автозаполнение +375 при фокусе на пустом поле
+        input.addEventListener('focus', function(e) {
+            if (!e.target.value) {
+                e.target.value = '+375 ';
+            }
+        });
+        
+        // Очищаем если осталось только +375
+        input.addEventListener('blur', function(e) {
+            if (e.target.value === '+375 ' || e.target.value === '+375') {
+                e.target.value = '';
+            }
+        });
+    });
+});
