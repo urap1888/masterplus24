@@ -112,7 +112,17 @@ function showCRM() {
     // Проверить аутентификацию
     if (!isCrmAuthenticated) {
         // Показать модальное окно входа
-        document.getElementById('crmLoginModal').style.display = 'block';
+        const modal = document.getElementById('crmLoginModal');
+        modal.style.display = 'flex';
+        modal.classList.add('show');
+        
+        // Блокируем прокрутку фона
+        document.body.style.overflow = 'hidden';
+        
+        // Прокручиваем к началу модального окна
+        setTimeout(() => {
+            modal.scrollTop = 0;
+        }, 100);
         return;
     }
     
@@ -144,12 +154,18 @@ window.checkCrmPassword = function(event) {
     
     const passwordInput = document.getElementById('crmPassword');
     const errorDiv = document.getElementById('crmLoginError');
+    const modal = document.getElementById('crmLoginModal');
     
     if (passwordInput.value === CRM_PASSWORD) {
         isCrmAuthenticated = true;
-        document.getElementById('crmLoginModal').style.display = 'none';
+        modal.style.display = 'none';
+        modal.classList.remove('show');
         passwordInput.value = '';
         errorDiv.style.display = 'none';
+        
+        // Разблокируем прокрутку фона
+        document.body.style.overflow = '';
+        
         showCRM();
     } else {
         errorDiv.style.display = 'block';
@@ -160,9 +176,14 @@ window.checkCrmPassword = function(event) {
 
 // Закрыть окно входа в CRM
 window.closeCrmLogin = function() {
-    document.getElementById('crmLoginModal').style.display = 'none';
+    const modal = document.getElementById('crmLoginModal');
+    modal.style.display = 'none';
+    modal.classList.remove('show');
     document.getElementById('crmPassword').value = '';
     document.getElementById('crmLoginError').style.display = 'none';
+    
+    // Разблокируем прокрутку фона
+    document.body.style.overflow = '';
 }
 
 // Выход из CRM

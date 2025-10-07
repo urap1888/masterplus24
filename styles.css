@@ -5679,3 +5679,40 @@ html {
         padding-top: 1rem !important;
     }
 }
+
+/* CRM Login Modal - центрирование */
+#crmLoginModal {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(8px) !important;
+    z-index: 99999 !important;
+    overflow-y: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#crmLoginModal.show {
+    display: flex !important;
+}
+
+#crmLoginModal .modal-content {
+    margin: auto !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+}
+
+@media (max-width: 768px) {
+    #crmLoginModal {
+        padding: 1rem !important;
+    }
+    
+    #crmLoginModal .modal-content {
+        width: 90% !important;
+        max-width: 350px !important;
+    }
+}
