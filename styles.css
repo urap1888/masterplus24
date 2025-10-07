@@ -5588,3 +5588,87 @@ html {
         display: block !important;
     }
 }
+
+/* Compact Client Cards - collapsed by default */
+@media (max-width: 768px) {
+    .crm-table tr {
+        position: relative !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .crm-table tr:active {
+        transform: scale(0.98) !important;
+    }
+    
+    /* Скрываем детали по умолчанию */
+    .crm-table td[data-label="Последний заказ"],
+    .crm-table td[data-label="Сумма"],
+    .crm-table td[data-label="Действия"] {
+        display: none !important;
+    }
+    
+    /* Показываем детали в развернутом состоянии */
+    .crm-table tr.expanded td[data-label="Последний заказ"],
+    .crm-table tr.expanded td[data-label="Сумма"],
+    .crm-table tr.expanded td[data-label="Действия"] {
+        display: flex !important;
+    }
+    
+    /* Иконка раскрытия */
+    .crm-table tr:after {
+        content: "▼" !important;
+        position: absolute !important;
+        right: 1rem !important;
+        top: 1rem !important;
+        font-size: 0.9rem !important;
+        color: #3b82f6 !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    .crm-table tr.expanded:after {
+        transform: rotate(180deg) !important;
+    }
+    
+    /* Анимация появления деталей */
+    .crm-table tr.expanded {
+        background: #f8fafc !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    }
+    
+    /* Компактный вид основной информации */
+    .crm-table td[data-label="Клиент"],
+    .crm-table td[data-label="Контакты"],
+    .crm-table td[data-label="Статус"] {
+        padding: 0.4rem 0 !important;
+    }
+    
+    .crm-table td[data-label="Клиент"]:before {
+        display: none !important;
+    }
+    
+    .crm-table td[data-label="Клиент"] {
+        font-weight: 600 !important;
+        color: #1e293b !important;
+        font-size: 1rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .crm-table td[data-label="Контакты"],
+    .crm-table td[data-label="Статус"] {
+        font-size: 0.85rem !important;
+    }
+    
+    .crm-table td[data-label="Контакты"]:before,
+    .crm-table td[data-label="Статус"]:before {
+        width: 70px !important;
+        font-size: 0.75rem !important;
+    }
+    
+    /* Разделитель между свернутой и развернутой частью */
+    .crm-table tr.expanded td[data-label="Последний заказ"] {
+        border-top: 2px solid #e2e8f0 !important;
+        margin-top: 0.5rem !important;
+        padding-top: 1rem !important;
+    }
+}

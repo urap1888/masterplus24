@@ -2859,3 +2859,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Функция раскрытия/сворачивания карточек клиентов в мобильной версии
+window.toggleClientCard = function(event) {
+    // Проверяем, что клик не по кнопке или ссылке
+    if (event.target.closest('.btn') || event.target.closest('a')) {
+        return;
+    }
+    
+    const row = event.currentTarget;
+    row.classList.toggle('expanded');
+};
+
+// Добавляем обработчики для карточек клиентов
+document.addEventListener('DOMContentLoaded', function() {
+    const setupCardToggle = () => {
+        const table = document.querySelector('.crm-table');
+        if (!table) return;
+        
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+            // Удаляем старый обработчик если есть
+            row.removeEventListener('click', window.toggleClientCard);
+            // Добавляем новый
+            row.addEventListener('click', window.toggleClientCard);
+        });
+    };
+    
+    // Настраиваем при загрузке
+    setupCardToggle();
+    
+    // Настраиваем при изменении DOM (добавление/удаление клиентов)
+    const table = document.querySelector('.crm-table');
+    if (table) {
+        const observer = new MutationObserver(setupCardToggle);
+        observer.observe(table.querySelector('tbody'), {
+            childList: true
+        });
+    }
+});
