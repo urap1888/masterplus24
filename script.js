@@ -2378,8 +2378,8 @@ window.sendChatMessage = function() {
         `;
         messagesContainer.appendChild(userMessage);
         
-        // Отправляем сообщение в Telegram
-        sendChatToTelegram(message);
+        // Отправляем сообщение в Telegram (отключено для снижения нагрузки)
+        // sendChatToTelegram(message);
         
         // Добавляем в историю разговора
         conversationHistory.push({
