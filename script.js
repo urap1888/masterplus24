@@ -280,6 +280,30 @@ function loadClientsFromStorage() {
                         status: 'active'
                     }
                 ]
+            },
+            {
+                id: 4,
+                name: 'Виктор Мисофт',
+                phone: '+375 29 456-78-90',
+                email: 'viktor.misoft@email.com',
+                address: 'Минск, пр-т Победителей, 84',
+                status: 'active',
+                orders: [
+                    {
+                        id: 6,
+                        service: 'Установка кондиционера',
+                        date: '2024-03-10',
+                        amount: 480,
+                        status: 'completed'
+                    },
+                    {
+                        id: 7,
+                        service: 'Обслуживание',
+                        date: '2024-05-15',
+                        amount: 150,
+                        status: 'completed'
+                    }
+                ]
             }
         ];
         saveClientsToStorage();
