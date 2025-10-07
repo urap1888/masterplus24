@@ -5232,21 +5232,117 @@ html {
         padding: 1rem;
     }
     
+    /* CRM Mobile Card View */
     .crm-table-container {
-        overflow-x: auto;
+        background: transparent !important;
+        box-shadow: none !important;
     }
     
-    .crm-table {
-        min-width: 600px;
+    .crm-table thead {
+        display: none !important;
+    }
+    
+    .crm-table,
+    .crm-table tbody,
+    .crm-table tr {
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .crm-table tr {
+        background: white !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+        margin-bottom: 1rem !important;
+        padding: 1rem !important;
+        border: 2px solid #e2e8f0 !important;
+    }
+    
+    .crm-table td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        padding: 0.5rem 0 !important;
+        border: none !important;
+        text-align: left !important;
+    }
+    
+    .crm-table td:before {
+        content: attr(data-label) !important;
+        font-weight: 600 !important;
+        color: #64748b !important;
+        font-size: 0.85rem !important;
+        margin-right: 1rem !important;
+        flex-shrink: 0 !important;
+        width: 100px !important;
+    }
+    
+    .client-info-cell {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem !important;
     }
     
     .client-actions {
-        flex-direction: column;
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        justify-content: flex-end !important;
+        flex-wrap: wrap !important;
     }
     
-    .client-info {
-        flex-direction: column;
-        text-align: center;
+    .client-actions .btn {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .status-badge {
+        font-size: 0.75rem !important;
+        padding: 0.3rem 0.6rem !important;
+    }
+    
+    .crm {
+        padding: 2rem 0 !important;
+    }
+    
+    .crm h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .crm-controls {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+    }
+    
+    .crm-search input {
+        font-size: 0.9rem !important;
+        padding: 0.6rem !important;
+    }
+    
+    .crm-filters {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    .crm-filters select {
+        font-size: 0.85rem !important;
+        padding: 0.5rem !important;
+    }
+    
+    .crm-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.8rem !important;
+    }
+    
+    .stat-card {
+        padding: 1rem !important;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .stat-card p {
+        font-size: 0.8rem !important;
     }
 }
 

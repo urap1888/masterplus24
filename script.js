@@ -2829,3 +2829,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Добавляем data-label атрибуты для мобильного CRM
+document.addEventListener('DOMContentLoaded', function() {
+    const table = document.querySelector('.crm-table');
+    if (table) {
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+        
+        const updateTableLabels = () => {
+            const rows = table.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                cells.forEach((cell, index) => {
+                    if (headers[index]) {
+                        cell.setAttribute('data-label', headers[index]);
+                    }
+                });
+            });
+        };
+        
+        // Обновляем при загрузке
+        updateTableLabels();
+        
+        // Наблюдаем за изменениями в таблице
+        const observer = new MutationObserver(updateTableLabels);
+        observer.observe(table.querySelector('tbody'), {
+            childList: true,
+            subtree: true
+        });
+    }
+});
