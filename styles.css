@@ -5249,3 +5249,111 @@ html {
         text-align: center;
     }
 }
+
+/* Compact Contact Info Styles */
+.contact-info-compact {
+    width: 100%;
+}
+
+.contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid #e2e8f0;
+}
+
+.contact-item-compact {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.contact-item-compact:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-item-compact i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contact-item-compact div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-item-compact strong {
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-item-compact span,
+.contact-item-compact a {
+    color: #64748b;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item-compact a:hover {
+    color: #3b82f6;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white !important;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Mobile Responsive for Compact Contact */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-item-compact {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .contact-item-compact i {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
