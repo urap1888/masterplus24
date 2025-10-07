@@ -2796,3 +2796,36 @@ console.log('Проверка функций:');
 console.log('searchClients:', typeof window.searchClients);
 console.log('filterClients:', typeof window.filterClients);
 console.log('addNewClient:', typeof window.addNewClient);
+
+// Функция для раскрытия деталей прайса на мобильных
+window.togglePricingDetails = function(button) {
+    const card = button.closest('.pricing-card');
+    if (card) {
+        card.classList.toggle('expanded');
+        if (card.classList.contains('expanded')) {
+            button.textContent = 'Свернуть';
+        } else {
+            button.textContent = 'Подробнее';
+        }
+    }
+}
+
+// Добавляем кнопки "Подробнее" ко всем карточкам прайса
+document.addEventListener('DOMContentLoaded', function() {
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    pricingCards.forEach(card => {
+        // Проверяем, есть ли уже кнопка
+        if (!card.querySelector('.pricing-card-mobile-expand')) {
+            const features = card.querySelector('.pricing-features');
+            if (features) {
+                const button = document.createElement('button');
+                button.className = 'pricing-card-mobile-expand';
+                button.textContent = 'Подробнее';
+                button.onclick = function() {
+                    togglePricingDetails(this);
+                };
+                card.appendChild(button);
+            }
+        }
+    });
+});
