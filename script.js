@@ -509,11 +509,19 @@ function viewClient(clientId) {
 window.addNewClient = function() {
     console.log('addNewClient called');
     const modal = document.getElementById('addClientModal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     modal.classList.add('show');
     document.getElementById('addClientModalTitle').textContent = 'Добавить клиента';
     document.getElementById('clientForm').reset();
     document.getElementById('clientForm').removeAttribute('data-edit-id');
+    
+    // Блокируем прокрутку фона
+    document.body.style.overflow = 'hidden';
+    
+    // Прокручиваем к началу модального окна (для мобильных)
+    setTimeout(() => {
+        modal.scrollTop = 0;
+    }, 100);
     
     // Автоматически заполняем дату сегодняшним днем
     const today = new Date().toISOString().split('T')[0];
@@ -539,8 +547,16 @@ window.editClient = function(clientId) {
     }
     
     const modal = document.getElementById('addClientModal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     modal.classList.add('show');
+    
+    // Блокируем прокрутку фона
+    document.body.style.overflow = 'hidden';
+    
+    // Прокручиваем к началу модального окна (для мобильных)
+    setTimeout(() => {
+        modal.scrollTop = 0;
+    }, 100);
 }
 
 function deleteClient(clientId) {
@@ -563,6 +579,9 @@ window.closeAddClientModal = function() {
     const modal = document.getElementById('addClientModal');
     modal.style.display = 'none';
     modal.classList.remove('show');
+    
+    // Разблокируем прокрутку фона
+    document.body.style.overflow = '';
 }
 
 window.addOrder = function() {

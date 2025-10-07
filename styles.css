@@ -1277,18 +1277,21 @@ img {
     background-color: rgba(0, 0, 0, 0.6) !important;
     backdrop-filter: blur(8px) !important;
     display: none !important;
+    overflow-y: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 #addClientModal.show {
-    display: block !important;
+    display: flex !important;
 }
 
 #addClientModal .modal-content {
     z-index: 100000 !important;
     width: 90% !important;
     max-width: 500px !important;
-    margin: 2% auto !important;
-    max-height: 85vh !important;
+    margin: auto !important;
+    max-height: 90vh !important;
     overflow-y: auto !important;
     position: relative !important;
 }
@@ -1410,11 +1413,15 @@ img {
 
 /* Мобильные стили для модального окна "Добавить клиента" */
 @media (max-width: 768px) {
+    #addClientModal {
+        padding: 1rem !important;
+    }
+    
     #addClientModal .modal-content {
-        width: 95% !important;
-        max-width: 400px !important;
-        margin: 1% auto !important;
-        max-height: 90vh !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        max-height: 95vh !important;
     }
     
     #addClientModal .modal-body {
