@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получение Chat ID группы MP24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .step {
+            background: #e9ecef;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .code {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            border: 1px solid #dee2e6;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Получение Chat ID группы MP24</h1>
+        
+        <div class="step">
+            <h3>1️⃣ Введите токен бота</h3>
+            <input type="text" id="botToken" placeholder="Введите токен бота (123456789:ABC...)">
+            <button onclick="testBot()">Проверить бота</button>
+        </div>
+
+        <div class="step">
+            <h3>2️⃣ Получите Chat ID группы</h3>
+            <p><strong>Важно:</strong> Бот должен быть добавлен в группу MP24!</p>
+            <button onclick="getGroupChatId()">Получить Chat ID группы</button>
+        </div>
+
+        <div class="step">
+            <h3>3️⃣ Отправьте тестовое сообщение</h3>
+            <button onclick="sendTestMessage()">📤 Отправить тест в группу</button>
+        </div>
+
+        <div class="step">
+            <h3>4️⃣ Обновите настройки сайта</h3>
+            <p>Скопируйте код ниже и вставьте в файл <code>script.js</code>:</p>
+            <div class="code" id="codeToCopy">
+const TELEGRAM_BOT_TOKEN = 'ВАШ_ТОКЕН';
+const TELEGRAM_CHAT_ID = 'ВАШ_CHAT_ID_ГРУППЫ';
+            </div>
+            <button onclick="copyCode()">📋 Скопировать код</button>
+        </div>
+
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <script>
+        let botToken = '';
+        let groupChatId = '';
+
+        async function testBot() {
+            const token = document.getElementById('botToken').value.trim();
+            if (!token) {
+                showResult('❌ Введите токен бота', false);
+                return;
+            }
+
+            botToken = token;
+
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${token}/getMe`);
+                const data = await response.json();
+                
+                if (data.ok) {
+                    showResult(`✅ Бот найден: ${data.result.first_name}\nUsername: @${data.result.username}`, true);
+                } else {
+                    showResult(`❌ Ошибка бота: ${data.description}`, false);
+                }
+            } catch (error) {
+                showResult(`❌ Ошибка соединения: ${error.message}`, false);
+            }
+        }
+
+        async function getGroupChatId() {
+            if (!botToken) {
+                showResult('❌ Сначала введите токен бота', false);
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${botToken}/getUpdates`);
+                const data = await response.json();
+                
+                if (data.ok && data.result.length > 0) {
+                    // Ищем сообщения из групп
+                    const groupMessages = data.result.filter(update => 
+                        update.message && 
+                        update.message.chat && 
+                        update.message.chat.type === 'group'
+                    );
+                    
+                    if (groupMessages.length > 0) {
+                        // Показываем все найденные группы
+                        let groupsInfo = '📋 Найденные группы:\n\n';
+                        const uniqueGroups = new Map();
+                        
+                        groupMessages.forEach(update => {
+                            const chat = update.message.chat;
+                            if (!uniqueGroups.has(chat.id)) {
+                                uniqueGroups.set(chat.id, {
+                                    id: chat.id,
+                                    title: chat.title,
+                                    type: chat.type
+                                });
+                            }
+                        });
+                        
+                        uniqueGroups.forEach((group, id) => {
+                            groupsInfo += `🏷️ Название: ${group.title}\n`;
+                            groupsInfo += `🆔 Chat ID: ${group.id}\n`;
+                            groupsInfo += `📱 Тип: ${group.type}\n\n`;
+                        });
+                        
+                        // Если есть группа с MP24 в названии
+                        const mp24Group = Array.from(uniqueGroups.values()).find(group => 
+                            group.title.toLowerCase().includes('mp24')
+                        );
+                        
+                        if (mp24Group) {
+                            groupChatId = mp24Group.id;
+                            showResult(`✅ Группа MP24 найдена!\n\n${groupsInfo}Используйте Chat ID: ${groupChatId}`, true);
+                        } else {
+                            showResult(`⚠️ Группа MP24 не найдена, но есть другие группы:\n\n${groupsInfo}Выберите нужную группу или создайте группу с названием "MP24"`, false);
+                        }
+                    } else {
+                        showResult('❌ Группы не найдены. Убедитесь, что:\n1. Бот добавлен в группу\n2. В группе есть сообщения\n3. Бот не заблокирован', false);
+                    }
+                } else {
+                    showResult('❌ Обновления не найдены. Убедитесь, что бот добавлен в группу и в группе есть сообщения.', false);
+                }
+            } catch (error) {
+                showResult(`❌ Ошибка: ${error.message}`, false);
+            }
+        }
+
+        async function sendTestMessage() {
+            const token = botToken || document.getElementById('botToken').value.trim();
+            const chatId = groupChatId || prompt('Введите Chat ID группы (например: -123456789)');
+            
+            if (!token || !chatId) {
+                showResult('❌ Заполните токен бота и Chat ID группы', false);
+                return;
+            }
+
+            try {
+                const message = `🧪 ТЕСТОВОЕ СООБЩЕНИЕ В ГРУППУ
+
+👤 Имя: Тест Тестов
+📞 Телефон: +375 (29) 284-84-34
+🏠 Адрес: Минск, ул. Тестовая 1
+🔧 Услуга: Установка
+💬 Сообщение: Тестовое сообщение для проверки работы в группе
+🕒 Время: ${new Date().toLocaleString('ru-RU')}`;
+
+                const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.ok) {
+                    showResult('✅ Сообщение отправлено в группу!\nПроверьте группу в Telegram.', true);
+                } else {
+                    showResult(`❌ Ошибка отправки: ${JSON.stringify(data, null, 2)}`, false);
+                }
+            } catch (error) {
+                showResult(`❌ Ошибка: ${error.message}`, false);
+            }
+        }
+
+        function copyCode() {
+            const chatId = groupChatId || prompt('Введите Chat ID группы');
+            const token = botToken || document.getElementById('botToken').value.trim();
+            
+            if (!token || !chatId) {
+                showResult('❌ Сначала получите токен и Chat ID', false);
+                return;
+            }
+
+            const code = `const TELEGRAM_BOT_TOKEN = '${token}';
+const TELEGRAM_CHAT_ID = '${chatId}';`;
+            
+            document.getElementById('codeToCopy').textContent = code;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                showResult('✅ Код скопирован в буфер обмена!\nТеперь вставьте его в файл script.js', true);
+            }).catch(() => {
+                showResult('❌ Не удалось скопировать. Скопируйте код вручную из поля выше.', false);
+            });
+        }
+
+        function showResult(message, isSuccess) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = message;
+            resultDiv.className = `result ${isSuccess ? 'success' : 'error'}`;
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

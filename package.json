@@ -1,0 +1,31 @@
+{
+  "name": "masterplus24-dialogflow-chat",
+  "version": "2.0.0",
+  "description": "Backend для интеграции Google Dialogflow с онлайн-чатом Masterplus 24",
+  "main": "dialogflow-backend.js",
+  "scripts": {
+    "start": "node dialogflow-backend.js",
+    "dev": "nodemon dialogflow-backend.js",
+    "start-yandex": "node chat-backend.js",
+    "start-dialogflow": "node dialogflow-backend.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "node-fetch": "^2.6.7",
+    "@google-cloud/dialogflow": "^5.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "dialogflow",
+    "google-cloud",
+    "chatbot",
+    "air-conditioner",
+    "masterplus24",
+    "nlp"
+  ],
+  "author": "Masterplus 24",
+  "license": "MIT"
+}

@@ -1,0 +1,2862 @@
+/* Дополнительные стили для улучшения внешнего вида */
+
+/* Компактная навигация */
+.navbar {
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    gap: 0.5rem;
+}
+
+.nav-menu li a {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav-menu li a:hover {
+    background: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.nav-menu li a i {
+    font-size: 0.8rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* Максимально компактные секции */
+section {
+    padding: 1.5rem 0;
+}
+
+/* Ультра-компактные заголовки */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #000000 !important;
+}
+
+/* Ультра-компактные карточки */
+.service-card, .client-card, .review-card, .guarantee-card, .pricing-card, .blog-card, .benefit-item, .ac-type-card {
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Компактные сетки */
+.services-grid, .clients-grid, .reviews-grid, .guarantees-grid, .pricing-grid, .blog-grid, .benefits-grid, .ac-types-grid {
+    gap: 1rem;
+}
+
+/* Компактные отступы */
+.container {
+    padding: 0 0.8rem;
+}
+
+/* Компактные формы */
+.form-group {
+    margin-bottom: 0.8rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Компактные кнопки */
+.btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* Компактные модальные окна */
+.modal-content {
+    max-width: 85%;
+    max-height: 85vh;
+    padding: 1rem;
+}
+
+/* Компактная статистика */
+.stats {
+    padding: 1.5rem 0;
+}
+
+.stat-item {
+    padding: 0.8rem;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+}
+
+/* Компактные отзывы */
+.review-card {
+    padding: 1rem;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.review-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Компактные цены */
+.pricing-card {
+    padding: 1rem;
+}
+
+.price-range .price {
+    font-size: 1.5rem;
+}
+
+/* Компактный футер */
+.footer {
+    padding: 1.5rem 0;
+}
+
+.footer-content {
+    gap: 1.5rem;
+}
+
+.footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-section p, .footer-section li {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Компактные заголовки */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #000000 !important;
+}
+
+/* Компактные карточки */
+.service-card, .client-card, .review-card, .guarantee-card, .pricing-card, .blog-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Компактная героическая секция */
+.hero {
+    padding: 3rem 0;
+    min-height: 60vh;
+}
+
+.hero-content {
+    gap: 2rem;
+}
+
+.hero-text-section h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-services {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.hero-service-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #374151;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.hero-service-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для кнопки-карточки установки */
+.hero-service-button {
+    cursor: pointer;
+    background: white;
+    color: #1f2937;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-service-button:hover {
+    transform: translateX(5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #0ea5e9;
+}
+
+.hero-service-button .service-info h4 {
+    color: #1f2937;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-service-button .service-price {
+    color: #dc2626;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    background: none;
+    padding: 0;
+    border: none;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.hero-service-button .service-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Стили для модального окна установки */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 12% auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 50%;
+    max-width: 350px;
+    max-height: 50vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+}
+
+.modal-header h2 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.modal-subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.benefits-modal {
+    margin-bottom: 2rem;
+}
+
+.benefits-content {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.benefits-text {
+    flex: 1;
+}
+
+.benefits-text h3 {
+    margin: 0 0 1.5rem 0;
+    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.benefits-image {
+    flex: 0 0 180px;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+/* Стили для модального окна обслуживания */
+.service-details {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.service-image {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.service-image img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.modal-body {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+}
+
+.benefits-list-modal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.benefits-list-modal li {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background: #f8fafc;
+    border-left: 4px solid #0ea5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.benefits-list-modal li:hover {
+    background: #e0f2fe;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.benefits-list-modal li strong {
+    color: #0ea5e9;
+    font-weight: 600;
+}
+
+/* Стили для обычного списка преимуществ */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.benefits-list li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: #f8fafc;
+    border-left: 4px solid #0ea5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.benefits-list li:hover {
+    background: #e0f2fe;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+}
+
+.benefits-list li strong {
+    color: #0ea5e9;
+    font-weight: 600;
+}
+
+/* Стили для интерактивных кнопок услуг */
+.hero-service-button {
+    cursor: pointer;
+    background: white;
+    color: #1f2937;
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-service-button:hover {
+    transform: translateX(5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #0ea5e9;
+}
+
+.hero-service-button .service-info h4 {
+    color: #1f2937;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero-service-button .service-price {
+    color: #dc2626;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    background: none;
+    padding: 0;
+    border: none;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+/* Адаптивность для модального окна с изображением */
+@media (max-width: 768px) {
+    .benefits-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .benefits-image {
+        flex: none;
+        width: 100%;
+    }
+    
+    .benefits-text h3 {
+        text-align: center;
+    }
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Компактные кнопки */
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+}
+
+/* Компактные формы */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+}
+
+/* Компактные модальные окна */
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+/* Компактная статистика */
+.stats {
+    padding: 2rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4f46e5;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Компактные отзывы */
+.review-card {
+    padding: 1.5rem;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Компактные цены */
+.pricing-card {
+    padding: 1.5rem;
+}
+
+.price-range .price {
+    font-size: 1.8rem;
+}
+
+/* Компактный футер */
+.footer {
+    padding: 2rem 0;
+}
+
+.footer-content {
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p, .footer-section li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Исправляем перекрытие навбара - фиксированная позиция */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.navbar {
+    position: relative;
+    z-index: 1001;
+}
+
+/* Добавляем отступ для контента - фиксированный header */
+body {
+    padding-top: 80px; /* Отступ для фиксированного header */
+}
+
+.hero {
+    margin-top: 0;
+    padding-top: 2rem;
+}
+
+/* Убеждаемся, что контент не перекрывается */
+section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Исправляем перекрытие для всех секций - фиксированный header */
+#home, #about, #services, #ac-types, #pricing, #calculator, #clients, #contact {
+    scroll-margin-top: 100px; /* Отступ для фиксированного header */
+}
+
+/* Убеждаемся, что hero секция начинается после навбара */
+.hero {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 3rem; /* Увеличиваем отступ еще больше */
+}
+
+/* Ультра-мобильная компактность */
+@media (max-width: 768px) {
+    /* Компактная мобильная навигация */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        height: 50px; /* Фиксированная высота */
+    }
+    
+    .navbar {
+        padding: 0;
+        height: 100%;
+    }
+    
+    .nav-container {
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        max-width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1f2937;
+        white-space: nowrap; /* Предотвращаем перенос строки */
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo i {
+        font-size: 1.2rem;
+        margin-right: 0.3rem;
+        color: #4f46e5;
+        flex-shrink: 0; /* Иконка не сжимается */
+    }
+    
+    .logo span {
+        white-space: nowrap; /* Текст не переносится */
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 50px;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        gap: 0.3rem;
+        z-index: 999;
+        border-radius: 0 0 10px 10px;
+        backdrop-filter: blur(15px);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 8px;
+        margin: 0.2rem 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-menu li a:hover {
+        background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(59, 130, 246, 0.1));
+        color: #4f46e5;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+    }
+    
+    .nav-menu li a:active {
+        transform: translateY(0);
+        background: rgba(79, 70, 229, 0.2);
+    }
+    
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Навбар в мобильной версии */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1002;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar {
+        position: relative;
+        z-index: 1003;
+    }
+    
+    /* Убеждаемся, что hero секция не перекрывается */
+    body {
+        padding-top: 50px; /* Отступ для компактной навигации */
+    }
+    
+    .hero {
+        padding-top: 2rem; /* Компактный отступ для hero */
+        margin-top: 0;
+    }
+    
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .logo i {
+        font-size: 1.3rem;
+    }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+    .nav-menu {
+        top: 50px;
+        padding: 1rem 0;
+    }
+    
+    .nav-menu li a {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.85rem;
+        margin: 0.1rem 0.5rem;
+    }
+    
+    .nav-menu li a i {
+        font-size: 0.75rem;
+        width: 14px;
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1002;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+        position: relative;
+        z-index: 1003;
+    }
+    
+    /* Убеждаемся, что контент не перекрывается на маленьких экранах */
+    body {
+        padding-top: 45px; /* Компактный отступ для маленьких экранов */
+    }
+    
+    .hero {
+        padding-top: 1.5rem;
+        margin-top: 0;
+    }
+    
+    .header {
+        height: 45px; /* Еще более компактная высота */
+    }
+    
+    .nav-container {
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1rem;
+        font-weight: 600;
+        white-space: nowrap; /* Предотвращаем перенос строки */
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo i {
+        font-size: 1.1rem;
+        margin-right: 0.2rem;
+        flex-shrink: 0; /* Иконка не сжимается */
+    }
+    
+    .logo span {
+        white-space: nowrap; /* Текст не переносится */
+    }
+    
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+}
+
+/* Анимации для мобильного меню */
+.nav-menu {
+    animation: slideInFromLeft 0.3s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        left: -100%;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.nav-menu li {
+    animation: fadeInUp 0.3s ease-out;
+    animation-fill-mode: both;
+}
+
+.nav-menu li:nth-child(1) { animation-delay: 0.1s; }
+.nav-menu li:nth-child(2) { animation-delay: 0.15s; }
+.nav-menu li:nth-child(3) { animation-delay: 0.2s; }
+.nav-menu li:nth-child(4) { animation-delay: 0.25s; }
+.nav-menu li:nth-child(5) { animation-delay: 0.3s; }
+.nav-menu li:nth-child(6) { animation-delay: 0.35s; }
+.nav-menu li:nth-child(7) { animation-delay: 0.4s; }
+.nav-menu li:nth-child(8) { animation-delay: 0.45s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+    .hero {
+        padding: 2rem 0;
+        min-height: 50vh;
+    }
+    
+    .hero-text-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-services {
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-service-item {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .benefits-section {
+        margin: 1.5rem 0;
+        padding: 1.5rem 0;
+    }
+    
+    .benefits-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .benefit-card {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .benefit-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+    
+    .benefit-content h4 {
+        font-size: 1rem;
+    }
+    
+    .benefit-content p {
+        font-size: 0.85rem;
+    }
+    
+    section {
+        padding: 1rem 0;
+    }
+    
+    .container {
+        padding: 0 0.6rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        color: #000000 !important;
+    }
+    
+    .service-card, .client-card, .review-card, .guarantee-card, .pricing-card, .blog-card, .benefit-item, .ac-type-card {
+        padding: 0.8rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .modal-content {
+        max-width: 95%;
+        padding: 0.8rem;
+    }
+    
+    .hero-image {
+        max-width: 300px;
+    }
+    
+    .hero-main-content {
+        gap: 1rem;
+    }
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 1.5rem 0;
+        min-height: 45vh;
+    }
+    
+    .hero-text-section h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-services {
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-service-item {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    section {
+        padding: 0.8rem 0;
+    }
+    
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+    
+    .service-card, .client-card, .review-card, .guarantee-card, .pricing-card, .blog-card, .benefit-item, .ac-type-card {
+        padding: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Улучшенная навигация с выпадающим меню */
+.nav-menu {
+    position: relative;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li:hover {
+    background: rgba(79, 70, 229, 0.05);
+    border-radius: 8px;
+}
+
+/* Анимации для навигации */
+.nav-menu li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-menu li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-menu li a:hover::before {
+    left: 100%;
+}
+
+/* Компактные иконки в навигации */
+.nav-menu li a i {
+    transition: transform 0.3s ease;
+}
+
+.nav-menu li a:hover i {
+    transform: scale(1.1);
+}
+
+/* Улучшенный логотип */
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+.logo i {
+    margin-right: 0.5rem;
+    color: #4f46e5;
+}
+
+/* Компактные сетки */
+.services-grid, .clients-grid, .reviews-grid, .guarantees-grid, .pricing-grid, .blog-grid {
+    gap: 1.5rem;
+}
+
+/* Компактные отступы */
+.section-subtitle {
+    margin-bottom: 1.5rem;
+    color: #000000 !important;
+}
+
+/* Улучшенная читаемость */
+body {
+    line-height: 1.6;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Компактные списки */
+ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Дополнительная компактность */
+.hero-image {
+    max-width: 400px;
+    height: auto;
+}
+
+.hero-main-content {
+    gap: 1.5rem;
+}
+
+/* Преимущества в разделе услуг */
+.benefits-section {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.benefits-section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #1f2937;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.benefit-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+
+.benefit-content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Компактные преимущества */
+.benefits-grid {
+    gap: 1rem;
+}
+
+.benefit-item {
+    padding: 1rem;
+    text-align: center;
+}
+
+.benefit-item i {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.benefit-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Улучшенные типы кондиционеров */
+.ac-types-grid {
+    gap: 1.5rem;
+}
+
+.ac-type-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ac-type-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ac-type-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.ac-type-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.ac-type-card:hover img {
+    transform: scale(1.05);
+}
+
+.ac-type-content {
+    padding: 1.2rem;
+}
+
+.ac-type-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #1e293b;
+}
+
+.ac-type-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.ac-type-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ac-type-features li {
+    padding: 0.3rem 0;
+    font-size: 0.85rem;
+    color: #475569;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.ac-type-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* Мобильные стили для типов кондиционеров */
+@media (max-width: 768px) {
+    .ac-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .ac-type-card {
+        margin-bottom: 1rem;
+    }
+    
+    .ac-type-image {
+        height: 160px;
+    }
+    
+    .ac-type-content {
+        padding: 1rem;
+    }
+    
+    .ac-type-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .ac-type-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+    
+    .ac-type-features li {
+        font-size: 0.8rem;
+        padding: 0.2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .ac-types-grid {
+        gap: 0.8rem;
+    }
+    
+    .ac-type-image {
+        height: 140px;
+    }
+    
+    .ac-type-content {
+        padding: 0.8rem;
+    }
+    
+    .ac-type-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .ac-type-card p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+        margin-bottom: 0.6rem;
+    }
+    
+    .ac-type-features li {
+        font-size: 0.75rem;
+        padding: 0.15rem 0;
+    }
+}
+
+/* Компактные FAQ */
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.faq-answer {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* FAQ Calculator Button */
+.faq-calculator-btn {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.faq-calculator-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.faq-calculator-btn i {
+    font-size: 1.1rem;
+}
+
+/* Additional Articles in Same Section */
+#additionalArticles {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+#additionalArticles.hidden {
+    display: none !important;
+}
+
+#additionalArticles.visible {
+    display: grid !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.all-article-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.all-article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #007bff;
+}
+
+.all-article-image {
+    height: 150px;
+    overflow: hidden;
+}
+
+.all-article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.all-article-card:hover .all-article-image img {
+    transform: scale(1.05);
+}
+
+.all-article-content {
+    padding: 1.5rem;
+}
+
+.all-article-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.all-article-content p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.all-article-date {
+    font-size: 0.8rem;
+    color: #999;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .all-articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .all-article-content {
+        padding: 1rem;
+    }
+    
+    .all-article-content h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Компактные контакты */
+.contact-info {
+    gap: 1rem;
+}
+
+.contact-item {
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    font-size: 0.9rem;
+}
+
+/* Компактная форма заявки */
+.application-form {
+    padding: 1.5rem;
+    max-width: 500px;
+}
+
+.application-form h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.application-form .form-group {
+    margin-bottom: 0.8rem;
+}
+
+.application-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Компактные скидки */
+.discounts-grid {
+    gap: 1rem;
+}
+
+.discount-card {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.discount-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.discount-card .discount-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.discount-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Компактные бренды */
+.brands-grid {
+    gap: 1rem;
+}
+
+.brand-item {
+    padding: 1rem;
+    text-align: center;
+}
+
+.brand-logo {
+    max-width: 120px;
+    max-height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.brand-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Компактные клиенты */
+.clients-grid {
+    gap: 1rem;
+}
+
+.client-card {
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0.8rem auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+}
+
+.client-logo img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.client-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #64748b;
+}
+
+/* Модальные окна клиентов - возвращаем оригинальные размеры */
+.client-modal-content {
+    max-width: 600px;
+    max-height: 90vh;
+    padding: 0;
+    width: 90%;
+    margin: 2% auto;
+}
+
+.client-modal-header {
+    margin-bottom: 1rem;
+}
+
+.client-modal-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+}
+
+.client-modal-body p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.client-modal-gallery {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.client-gallery-img {
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.client-modal-details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.client-modal-details ul {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Мобильная адаптация модального окна клиентов */
+@media (max-width: 768px) {
+    .client-modal-content {
+        width: 95%;
+        max-width: 95%;
+        margin: 5% auto;
+        padding: 1rem;
+    }
+    
+    .client-modal-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .client-modal-body p {
+        font-size: 0.9rem;
+    }
+    
+    .client-gallery-img {
+        max-height: 120px;
+    }
+    
+    .client-modal-details h4 {
+        font-size: 1rem;
+    }
+    
+    .client-modal-details ul {
+        font-size: 0.85rem;
+    }
+}
+
+/* Компактный онлайн-чат */
+.chat-window {
+    width: 320px;
+    height: 400px;
+}
+
+.chat-messages {
+    padding: 0.8rem;
+}
+
+.chat-message {
+    margin-bottom: 0.8rem;
+}
+
+.message-content {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.chat-input {
+    padding: 0.8rem;
+}
+
+.chat-input input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.chat-quick-actions {
+    padding: 0.5rem 0.8rem 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.quick-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+    .chat-quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.3rem;
+        padding: 0.5rem;
+    }
+    
+    .quick-btn {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.4rem;
+    }
+}
+
+/* Индикатор печати для Yandex GPT */
+.typing-indicator {
+    opacity: 0.8;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.typing-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #007bff;
+    animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes typing {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Dialogflow дополнительная информация */
+.intent-info, .confidence-info, .fallback-info {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    border-left: 3px solid #007bff;
+}
+
+.confidence-info {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    border-left-color: #28a745;
+}
+
+.fallback-info {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border-left-color: #ffc107;
+}
+
+/* Анимация для дополнительной информации */
+.intent-info, .confidence-info, .fallback-info {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Компактные зоны обслуживания */
+.areas-grid {
+    gap: 1rem;
+}
+
+.area-card {
+    padding: 1.5rem;
+}
+
+.area-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.area-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.area-districts {
+    max-height: 120px;
+    padding: 0.8rem 0;
+}
+
+.area-districts li {
+    font-size: 0.85rem;
+    padding: 0.2rem 0;
+}
+
+.area-info span {
+    font-size: 0.8rem;
+}
+
+/* Компактные статьи */
+.blog-grid {
+    gap: 1rem;
+}
+
+.blog-card {
+    padding: 1rem;
+}
+
+.blog-image {
+    height: 150px;
+}
+
+.blog-content {
+    padding: 1rem;
+}
+
+.blog-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.blog-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.blog-meta {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+}
+
+.blog-category {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+}
+
+/* Модальные окна для статей */
+.blog-modal {
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.blog-modal-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.blog-modal-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.blog-modal-meta .blog-date {
+    color: #6b7280;
+}
+
+.blog-modal-meta .blog-category {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.blog-modal-header h2 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.blog-modal-body {
+    margin-bottom: 1.5rem;
+}
+
+.blog-modal-image {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.blog-modal-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.blog-modal-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.blog-modal-text h3 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem 0;
+    color: #1f2937;
+}
+
+.blog-modal-text h4 {
+    font-size: 1.1rem;
+    margin: 1.2rem 0 0.6rem 0;
+    color: #1f2937;
+}
+
+.blog-modal-text p {
+    margin-bottom: 1rem;
+}
+
+.blog-modal-text ul, .blog-modal-text ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.blog-modal-text li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-modal-text strong {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.blog-modal-footer {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.blog-modal-footer .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+}
+
+/* Адаптивность для модальных окон статей */
+@media (max-width: 768px) {
+    .blog-modal {
+        max-width: 95%;
+        margin: 1rem;
+    }
+    
+    .blog-modal-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .blog-modal-image img {
+        height: 200px;
+    }
+    
+    .blog-modal-text {
+        font-size: 0.9rem;
+    }
+    
+    .blog-modal-text h3 {
+        font-size: 1.1rem;
+    }
+    
+    .blog-modal-text h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Компактные гарантии */
+.guarantees-grid {
+    gap: 1rem;
+}
+
+.guarantee-card {
+    padding: 1.5rem;
+}
+
+.guarantee-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.guarantee-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+}
+
+.guarantee-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Компактные сертификаты */
+.certificates-grid {
+    gap: 1rem;
+}
+
+.certificate-item {
+    padding: 1rem;
+}
+
+.certificate-item img {
+    height: 150px;
+    margin-bottom: 0.8rem;
+}
+
+.certificate-item p {
+    font-size: 0.8rem;
+}
+
+/* Компактный процесс работы */
+.process-steps-compact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.process-step-compact {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    max-width: 200px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.process-step-compact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.step-number-compact {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.step-content-compact h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.step-content-compact p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.step-time-compact {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    font-style: italic;
+    background: #f3f4f6;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.process-arrow {
+    font-size: 1.5rem;
+    color: #4f46e5;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Мобильная адаптация для компактного процесса */
+@media (max-width: 768px) {
+    .process-steps-compact {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .process-step-compact {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .process-arrow {
+        transform: rotate(90deg);
+        font-size: 1.2rem;
+        margin: 0.3rem 0;
+    }
+    
+    .step-number-compact {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .step-content-compact h3 {
+        font-size: 0.9rem;
+    }
+    
+    .step-content-compact p {
+        font-size: 0.75rem;
+    }
+    
+    .step-time-compact {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-steps-compact {
+        gap: 0.5rem;
+    }
+    
+    .process-step-compact {
+        padding: 0.8rem;
+    }
+    
+    .step-number-compact {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Компактный калькулятор */
+.calculator-form {
+    padding: 2rem;
+    max-width: 700px;
+}
+
+.calculator-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-group {
+    gap: 0.8rem;
+}
+
+.checkbox-label {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.drilling-options {
+    padding: 1rem;
+    margin-top: 0.8rem;
+}
+
+.drilling-param {
+    margin-bottom: 0.8rem;
+}
+
+.drilling-param label {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.drilling-param input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+.calculate-btn {
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.result {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.result h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.result-item {
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+}
+
+.result-item.total {
+    font-size: 1.1rem;
+    padding-top: 1rem;
+    margin-top: 0.8rem;
+}
+
+.result-note {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+/* Улучшенные анимации */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Пульсирующий эффект для кнопок */
+.btn-primary:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* Плавающий эффект для карточек */
+.service-card:hover,
+.brand-card:hover,
+.discount-card:hover {
+    animation: float 0.6s ease-in-out;
+}
+
+/* Улучшенные градиенты */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Стили для главного изображения */
+.hero-main-image {
+    transition: transform 0.3s ease;
+}
+
+.hero-image-container:hover .hero-main-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    backdrop-filter: blur(5px);
+}
+
+.hero-image-container {
+    transition: box-shadow 0.3s ease;
+}
+
+.hero-image-container:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Улучшенные стили для блока преимуществ */
+.benefits-highlight {
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.benefit-card {
+    animation: fadeInLeft 0.6s ease forwards;
+}
+
+.benefit-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.benefit-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.benefit-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.benefit-icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: rotate 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon::before {
+    opacity: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Улучшенные тени */
+.service-card,
+.brand-card,
+.discount-card,
+.gallery-item {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover,
+.brand-card:hover,
+.discount-card:hover,
+.gallery-item:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Улучшенные кнопки */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Улучшенные формы */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Улучшенные модальные окна */
+.modal-content {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Улучшенные уведомления */
+.notification {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Улучшенная навигация */
+.navbar {
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Улучшенные иконки */
+.service-icon,
+.feature i,
+.contact-item i {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon,
+.gallery-item:hover .gallery-image i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Улучшенные цены */
+.price-range {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 1px solid #bae6fd;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-range::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.brand-card:hover .price-range::before {
+    left: 100%;
+}
+
+/* Улучшенные галереи */
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image::before {
+    opacity: 1;
+}
+
+/* Улучшенные скидки */
+.discount-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.discount-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: rotate 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.discount-card:hover .discount-badge::before {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Улучшенные заголовки */
+h1, h2, h3, h4, h5, h6 {
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Улучшенные разделители */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+    margin: 3rem 0;
+}
+
+/* Улучшенные футеры */
+.footer {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #64748b, transparent);
+}
+
+/* Улучшенные скроллбары */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 6px;
+    border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+/* Улучшенные переходы */
+* {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Улучшенные фокусы */
+*:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Улучшенные медиа-запросы */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
+    .ac-features {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .feature {
+        min-width: auto;
+        text-align: left;
+    }
+    
+    .brand-card {
+        margin-bottom: 2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .service-card,
+    .brand-card,
+    .discount-card {
+        padding: 1rem;
+    }
+    
+    .gallery-image {
+        height: 120px;
+    }
+    
+    .gallery-image i {
+        font-size: 2rem;
+    }
+}
