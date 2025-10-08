@@ -64,7 +64,7 @@
     </style>
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css?v=2.5">
+    <link rel="stylesheet" href="styles.css?v=2.6">
     <link rel="stylesheet" href="extra-styles.css">
     <link rel="stylesheet" href="new-sections.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1856,6 +1856,15 @@
         </div>
     </div>
 
-    <script src="script.js?v=2.2"></script>
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="image-lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImage" class="lightbox-image" src="" alt="">
+        </div>
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js?v=2.3"></script>
 </body>
 </html>

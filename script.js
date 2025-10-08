@@ -3051,3 +3051,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Image Lightbox Functions
+window.openLightbox = function(imageSrc, imageAlt) {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    
+    lightboxImage.src = imageSrc;
+    lightboxImage.alt = imageAlt;
+    lightboxCaption.textContent = imageAlt || 'Изображение';
+    
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+window.closeLightbox = function(event) {
+    // Закрываем только если клик по фону или кнопке закрытия
+    if (event.target.id === 'imageLightbox' || event.target.classList.contains('lightbox-close')) {
+        const lightbox = document.getElementById('imageLightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Добавляем обработчики на все изображения в галереях клиентов
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.client-gallery-img');
+    
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function(e) {
+            e.stopPropagation(); // Предотвращаем закрытие модального окна
+            openLightbox(this.src, this.alt);
+        });
+    });
+});
+
+// Закрытие lightbox по Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const lightbox = document.getElementById('imageLightbox');
+        if (lightbox && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
