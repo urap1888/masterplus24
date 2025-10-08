@@ -2003,27 +2003,41 @@ document.addEventListener('keydown', function(event) {
 // Lotos Modal Functions
 window.showLotosModal = function() {
     const modal = document.getElementById('lotosModal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
+    modal.classList.add('show');
     document.body.style.overflow = 'hidden';
+    
+    // Прокручиваем к началу модального окна
+    setTimeout(() => {
+        modal.scrollTop = 0;
+    }, 100);
 }
 
 window.closeLotosModal = function() {
     const modal = document.getElementById('lotosModal');
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
 }
 
 // Versailles modal functions
 window.showVersaillesModal = function() {
     const modal = document.getElementById('versaillesModal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
+    modal.classList.add('show');
     document.body.style.overflow = 'hidden';
+    
+    // Прокручиваем к началу модального окна
+    setTimeout(() => {
+        modal.scrollTop = 0;
+    }, 100);
 }
 
 window.closeVersaillesModal = function() {
     const modal = document.getElementById('versaillesModal');
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
 }
 
 // FAQ functionality

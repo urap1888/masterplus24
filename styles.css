@@ -1245,21 +1245,55 @@ img {
 }
 
 /* Стиль для модального окна Версаль */
+#versaillesModal {
+    z-index: 10000 !important;
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#versaillesModal.show {
+    display: flex !important;
+}
+
+#versaillesModal .client-modal-content {
+    z-index: 10001 !important;
+    margin: auto !important;
+}
+
+#versaillesModal .client-modal-close {
+    z-index: 10002 !important;
+}
+
 #versaillesModal .client-modal-logo {
-    background: linear-gradient(135deg, #8b4513, #654321);
+    background: white !important;
+    width: 120px !important;
+    height: 120px !important;
+    padding: 10px !important;
 }
 
 #versaillesModal .client-modal-logo-img {
-    background: linear-gradient(135deg, #8b4513, #654321);
+    background: white !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
 }
 
 /* Lotos Modal - поверх всех элементов */
 #lotosModal {
     z-index: 10000 !important;
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#lotosModal.show {
+    display: flex !important;
 }
 
 #lotosModal .client-modal-content {
     z-index: 10001 !important;
+    margin: auto !important;
 }
 
 #lotosModal .client-modal-close {
