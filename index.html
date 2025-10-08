@@ -64,7 +64,7 @@
     </style>
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css?v=2.6">
+    <link rel="stylesheet" href="styles.css?v=2.7">
     <link rel="stylesheet" href="extra-styles.css">
     <link rel="stylesheet" href="new-sections.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -1859,12 +1859,19 @@
     <!-- Image Lightbox -->
     <div id="imageLightbox" class="image-lightbox" onclick="closeLightbox(event)">
         <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <button class="lightbox-prev" onclick="navigateLightbox(-1, event)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" onclick="navigateLightbox(1, event)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
         <div class="lightbox-content">
             <img id="lightboxImage" class="lightbox-image" src="" alt="">
         </div>
         <div id="lightboxCaption" class="lightbox-caption"></div>
+        <div class="lightbox-counter" id="lightboxCounter">1 / 5</div>
     </div>
 
-    <script src="script.js?v=2.3"></script>
+    <script src="script.js?v=2.4"></script>
 </body>
 </html>

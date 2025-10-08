@@ -3052,18 +3052,82 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Image Lightbox Functions
-window.openLightbox = function(imageSrc, imageAlt) {
+// Image Lightbox Functions with Gallery Navigation
+let currentGalleryImages = [];
+let currentImageIndex = 0;
+
+window.openLightbox = function(imageSrc, imageAlt, galleryImages = null) {
     const lightbox = document.getElementById('imageLightbox');
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxCounter = document.getElementById('lightboxCounter');
     
-    lightboxImage.src = imageSrc;
-    lightboxImage.alt = imageAlt;
-    lightboxCaption.textContent = imageAlt || 'Изображение';
+    // Если передан массив изображений галереи, сохраняем его
+    if (galleryImages && galleryImages.length > 0) {
+        currentGalleryImages = galleryImages;
+        currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
+        if (currentImageIndex === -1) currentImageIndex = 0;
+    } else {
+        currentGalleryImages = [{ src: imageSrc, alt: imageAlt }];
+        currentImageIndex = 0;
+    }
+    
+    // Обновляем изображение и информацию
+    updateLightboxImage();
     
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
+}
+
+function updateLightboxImage() {
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    
+    const currentImage = currentGalleryImages[currentImageIndex];
+    
+    lightboxImage.src = currentImage.src;
+    lightboxImage.alt = currentImage.alt;
+    lightboxCaption.textContent = currentImage.alt || 'Изображение';
+    
+    // Обновляем счетчик
+    if (currentGalleryImages.length > 1) {
+        lightboxCounter.textContent = `${currentImageIndex + 1} / ${currentGalleryImages.length}`;
+        lightboxCounter.style.display = 'block';
+    } else {
+        lightboxCounter.style.display = 'none';
+    }
+}
+
+window.navigateLightbox = function(direction, event) {
+    if (event) {
+        event.stopPropagation();
+    }
+    
+    if (currentGalleryImages.length <= 1) return;
+    
+    const lightboxImage = document.getElementById('lightboxImage');
+    
+    // Добавляем анимацию
+    lightboxImage.classList.remove('slide-left', 'slide-right');
+    
+    currentImageIndex += direction;
+    
+    // Зацикливание галереи
+    if (currentImageIndex < 0) {
+        currentImageIndex = currentGalleryImages.length - 1;
+    } else if (currentImageIndex >= currentGalleryImages.length) {
+        currentImageIndex = 0;
+    }
+    
+    // Добавляем класс анимации
+    if (direction > 0) {
+        lightboxImage.classList.add('slide-right');
+    } else {
+        lightboxImage.classList.add('slide-left');
+    }
+    
+    updateLightboxImage();
 }
 
 window.closeLightbox = function(event) {
@@ -3072,28 +3136,45 @@ window.closeLightbox = function(event) {
         const lightbox = document.getElementById('imageLightbox');
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
+        currentGalleryImages = [];
+        currentImageIndex = 0;
     }
 }
 
 // Добавляем обработчики на все изображения в галереях клиентов
 document.addEventListener('DOMContentLoaded', function() {
-    const galleryImages = document.querySelectorAll('.client-gallery-img');
+    // Для каждой галереи создаем отдельный массив изображений
+    const galleries = document.querySelectorAll('.client-modal-gallery');
     
-    galleryImages.forEach(img => {
-        img.addEventListener('click', function(e) {
-            e.stopPropagation(); // Предотвращаем закрытие модального окна
-            openLightbox(this.src, this.alt);
+    galleries.forEach(gallery => {
+        const galleryImages = Array.from(gallery.querySelectorAll('.client-gallery-img'));
+        const imagesData = galleryImages.map(img => ({
+            src: img.src,
+            alt: img.alt
+        }));
+        
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', function(e) {
+                e.stopPropagation(); // Предотвращаем закрытие модального окна
+                openLightbox(this.src, this.alt, imagesData);
+            });
         });
     });
 });
 
-// Закрытие lightbox по Escape
+// Закрытие и навигация по клавиатуре
 document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        const lightbox = document.getElementById('imageLightbox');
-        if (lightbox && lightbox.classList.contains('active')) {
+    const lightbox = document.getElementById('imageLightbox');
+    if (lightbox && lightbox.classList.contains('active')) {
+        if (event.key === 'Escape') {
             lightbox.classList.remove('active');
             document.body.style.overflow = '';
+            currentGalleryImages = [];
+            currentImageIndex = 0;
+        } else if (event.key === 'ArrowLeft') {
+            navigateLightbox(-1);
+        } else if (event.key === 'ArrowRight') {
+            navigateLightbox(1);
         }
     }
 });
