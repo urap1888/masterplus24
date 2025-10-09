@@ -990,76 +990,7 @@ document.querySelectorAll('.hero-buttons .btn').forEach(button => {
     });
 });
 
-// Discount Modal Functions
-const modal = document.getElementById('discountModal');
-const closeModal = document.querySelector('.close');
-
-function showDiscountModal(type) {
-    const modalTitle = document.getElementById('modalTitle');
-    const discountType = document.getElementById('discountType');
-    
-    // Set modal title based on discount type
-    switch(type) {
-        case 'online':
-            modalTitle.textContent = 'Получить скидку 10% при заказе онлайн';
-            discountType.value = 'online';
-            break;
-        case 'pensioner':
-            modalTitle.textContent = 'Получить скидку 20% для пенсионеров';
-            discountType.value = 'pensioner';
-            break;
-        case 'family':
-            modalTitle.textContent = 'Получить скидку 20% для многодетных семей';
-            discountType.value = 'family';
-            break;
-    }
-    
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function hideDiscountModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-// Close modal when clicking X
-closeModal.addEventListener('click', hideDiscountModal);
-
-// Close modal when clicking outside
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        hideDiscountModal();
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-        hideDiscountModal();
-    }
-});
-
-// Discount Form Submission
-const discountForm = document.getElementById('discountForm');
-if (discountForm) {
-    discountForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(discountForm);
-    const data = Object.fromEntries(formData);
-    
-    // Show success message
-    showNotification('Заявка на скидку отправлена! Мы свяжемся с вами в ближайшее время.', 'success');
-    
-    // Reset form
-    discountForm.reset();
-    hideDiscountModal();
-    
-    // Here you would typically send the data to your server
-    console.log('Discount application:', data);
-    });
-}
+// Discount Modal Functions - REMOVED (no longer needed)
 
 // Contact Form Submission
 const contactForm = document.getElementById('contactForm');
@@ -1359,12 +1290,7 @@ function addDiscountCalculator() {
     discountType.addEventListener('change', updateCalculator);
 }
 
-// Initialize discount calculator when modal opens
-const originalShowDiscountModal = showDiscountModal;
-showDiscountModal = function(type) {
-    originalShowDiscountModal(type);
-    setTimeout(addDiscountCalculator, 100);
-};
+// Discount calculator - REMOVED (no longer needed)
 
 // Lazy loading for images (when they are added)
 function lazyLoadImages() {

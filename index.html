@@ -665,19 +665,16 @@
                     <div class="discount-badge">10%</div>
                     <h3>Скидка при заказе онлайн</h3>
                     <p>Получите скидку 10% на все услуги при заказе через наш сайт</p>
-                    <button class="btn btn-primary" onclick="showDiscountModal('online')">Получить скидку</button>
                 </div>
                 <div class="discount-card">
                     <div class="discount-badge">20%</div>
                     <h3>Скидка пенсионерам</h3>
                     <p>Специальная скидка 20% на все работы для пенсионеров</p>
-                    <button class="btn btn-primary" onclick="showDiscountModal('pensioner')">Получить скидку</button>
                 </div>
                 <div class="discount-card">
                     <div class="discount-badge">20%</div>
                     <h3>Скидка многодетным семьям</h3>
                     <p>Скидка 20% на все работы для многодетных семей</p>
-                    <button class="btn btn-primary" onclick="showDiscountModal('family')">Получить скидку</button>
                 </div>
             </div>
         </div>
@@ -1678,32 +1675,6 @@
         </div>
     </footer>
 
-    <!-- Discount Modal -->
-    <div id="discountModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3 id="modalTitle">Получить скидку</h3>
-            <form id="discountForm">
-                <div class="form-group">
-                    <input type="text" id="discountName" name="name" placeholder="Ваше имя" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="discountPhone" name="phone" placeholder="+375 XX XXX-XX-XX" required>
-                </div>
-                <div class="form-group">
-                    <select id="discountType" name="discountType" required>
-                        <option value="">Выберите тип скидки</option>
-                        <option value="online">Онлайн заказ (10%)</option>
-                        <option value="pensioner">Пенсионер (20%)</option>
-                        <option value="family">Многодетная семья (20%)</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Получить скидку</button>
-            </form>
-        </div>
-    </div>
-
-
     <!-- Client Modal -->
     <div id="clientModal" class="client-modal">
         <div class="client-modal-content">
@@ -1872,6 +1843,6 @@
         <div class="lightbox-counter" id="lightboxCounter">1 / 5</div>
     </div>
 
-    <script src="script.js?v=2.4"></script>
+    <script src="script.js?v=2.5"></script>
 </body>
 </html>
