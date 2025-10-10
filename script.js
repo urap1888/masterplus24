@@ -3104,3 +3104,14 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+// Прокрутка на главную при загрузке/обновлении страницы
+window.addEventListener('load', function() {
+    // Прокручиваем в самый верх страницы
+    window.scrollTo(0, 0);
+    
+    // Также очищаем хеш из URL, если он есть
+    if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname);
+    }
+});
