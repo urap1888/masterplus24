@@ -3106,12 +3106,33 @@ document.addEventListener('keydown', function(event) {
 });
 
 // Прокрутка на главную при загрузке/обновлении страницы
+// Выполняем сразу при загрузке скрипта
+if (window.history.scrollRestoration) {
+    window.history.scrollRestoration = 'manual';
+}
+
+// Прокручиваем в самый верх немедленно
+window.scrollTo(0, 0);
+document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
+
+// Очищаем хеш
+if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+}
+
+// Дополнительная проверка при полной загрузке
 window.addEventListener('load', function() {
-    // Прокручиваем в самый верх страницы
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    }, 0);
+});
+
+// И при готовности DOM
+document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo(0, 0);
-    
-    // Также очищаем хеш из URL, если он есть
-    if (window.location.hash) {
-        history.replaceState(null, null, window.location.pathname);
-    }
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 });

@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Принудительная прокрутка на главную -->
+    <script>
+        // Отключаем автовосстановление позиции прокрутки
+        if (window.history.scrollRestoration) {
+            window.history.scrollRestoration = 'manual';
+        }
+        // Немедленная прокрутка
+        window.scrollTo(0, 0);
+    </script>
+    
     <!-- SEO Meta Tags -->
         <title>Masterplus 24 | Установка и продажа кондиционеров в Минске | +375 29 284-84-34</title>
     <meta name="description" content="Профессиональная установка кондиционеров в Минске и области. Продажа, монтаж, ремонт, обслуживание. Гарантия 5 лет. Работаем 24/7. Звоните +375 29 284-84-34">
@@ -1840,6 +1850,6 @@
         <div class="lightbox-counter" id="lightboxCounter">1 / 5</div>
     </div>
 
-    <script src="script.js?v=2.6"></script>
+    <script src="script.js?v=2.7"></script>
 </body>
 </html>
