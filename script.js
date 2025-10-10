@@ -51,7 +51,10 @@ function showBlog() {
 }
 
 // Tab switching function
-function switchTab(tabName) {
+window.switchTab = function(tabName) {
+    // Сохраняем текущую позицию прокрутки
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
     // Hide all tab contents
     const tabContents = document.querySelectorAll('.tab-content');
     tabContents.forEach(content => {
@@ -75,6 +78,11 @@ function switchTab(tabName) {
     if (selectedButton) {
         selectedButton.classList.add('active');
     }
+    
+    // Восстанавливаем позицию прокрутки после небольшой задержки
+    setTimeout(function() {
+        window.scrollTo(0, scrollPosition);
+    }, 0);
 }
 
 // Calculator Functions
